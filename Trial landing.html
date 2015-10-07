@@ -1,0 +1,20 @@
+<div class="mapContainer">
+
+	<div id="search_container">
+		<div id="find_taps_search2" style="display:block;">
+			<div class="sub-nav-niblet"></div>
+			<h1>Find your nearest Tap</h1>
+			<p class="subheading">Refill your <a href="http://www.givemetap.co.uk/collections/frontpage">GiveMeTap bottle</a> with water from 812 shops in 157 cities.</p>
+			<form accept-charset="UTF-8" action="/maps" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+				<input type="text" style="width: 200px; display: inline;" placeholder="London, Manchester, etc." name="search" id="search2" autocomplete="off">
+				<input type="submit" class="btn styled-submit" style="display:inline;" value="Find Taps" name="find-taps" id="find-taps">
+			</form>	      or
+			<form accept-charset="UTF-8" action="/maps" method="get" style="display:inline"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+				<input type="hidden" placeholder="London" name="geolocation" id="geolocation" value="Manchester">
+				<input type="submit" class="btn styled-submit" style="display:inline;" value="Use my current location" name="use_user_location" id="use_user_location" disabled="">
+			</form>	    </div>
+		</div>
+
+		<div id="gmap"></div>
+
+	</div>

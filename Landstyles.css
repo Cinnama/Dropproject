@@ -1,0 +1,213 @@
+
+body {
+    background-color: #00aeef;
+    align-items: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+
+}
+
+h2 {
+    text-align: center;
+    color: #FFFFFF;
+    margin: 10px;
+    font-family: 'Lora', serif;
+}
+
+div container {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.find_search {
+
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#find_search {
+    color: #FFFFFF;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+
+}
+
+.btnstyle-submit {
+    display:inline;
+    height: 30px;
+    width: 90px;
+    padding: 0px 25px;
+    background-color:transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    color:#FFFFFF;
+    font-family: 'lori';
+
+}
+
+.btnstyle-submit2 {
+    display:block;
+    /*margin:0px 0px 0px 380px;*/
+    height: 30px;
+    width: 220px;
+    padding: 0px 25px;
+    background-color:transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    color:#FFFFFF;
+    font-family: 'lori';
+
+}
+
+
+.btnstyle-submit:hover {
+  background-color: #81DAF5;
+
+}
+
+
+.enterlocation {
+  background-color: #FFFFFF;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  padding: 0px 15px;
+
+}
+
+
+.find-water {
+  display:inline;
+  height: 30px;
+  padding: 0px 25px;
+  background-color:transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  font-size: 20px;
+  color:#FFFFFF;
+  font-family: 'lori';
+}
+
+
+
+
+/*
+
+div {
+    position: fixed;
+    left: 450px;
+
+}
+
+
+
+/*
+
+.btnstyle-submit {
+    display:inline;
+    height: 30px;
+    width: 170px;
+    background-color:transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    color:#FFFFFF;
+    font-family: lori;
+
+}
+
+
+
+/*
+Buttons to be transparent / white border / change font
+
+background-color: transparent;
+
+input type {
+background-color: transparent;
+
+
+}
+
+/*
+
+body {
+  align: center;
+}
+
+/*
+
+div id {
+  margin:0px;
+  align: center;
+}
+
+div find_search {
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div search_container {
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div locationform {
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  align-items: center;
+}
+
+
+/*
+img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; /* Half the height */
+   /*
+   margin-left: -250px; /* Half the width */
+/*
+form { - this isn't doing anything
+  margin-left: auto;
+  margin-right: auto;
+  align: center;
+}
+
+
+
+/*
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+*/
