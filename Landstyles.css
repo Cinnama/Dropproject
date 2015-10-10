@@ -25,6 +25,10 @@ h2 {
     font-family: 'Lora', serif;
 }
 
+p {
+  text-align: center;
+}
+
 div container {
     display: block;
     position: relative;
@@ -36,6 +40,7 @@ div container {
 
 .find_search {
 
+    width:100%;
     display:block;
     position: relative;
     margin-left: auto;
@@ -47,11 +52,13 @@ div container {
     color: #FFFFFF;
     font-family: 'Lora', serif;
     font-size: 20px;
+    align-self: flex-end;
+
 
 }
 
 .btnstyle-submit {
-    display:inline;
+    display:block;
     height: 30px;
     width: 90px;
     padding: 0px 25px;
@@ -85,6 +92,10 @@ div container {
 
 }
 
+.btnstyle-submit2:hover {
+  background-color: #81DAF5;
+
+}
 
 .enterlocation {
   background-color: #FFFFFF;
@@ -107,6 +118,12 @@ div container {
   font-family: 'lori';
 }
 
+.formcontent {
+  display:block;
+  align-items: center;
+
+
+}
 
 
 
