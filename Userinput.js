@@ -1,46 +1,61 @@
-var userLocation = "London";
+// var userLocation = "London";
+var sources = [
+  {
+    lat: -3.253534,
+    lng: 40.079475
+  },
+
+  {
+    lat: -3.253539,
+    lng: 40.079477
+  },
+
+  {
+    lat: -3.253524,
+    lng: 40.079485
+  }
+
+]
 function user_input(){
-   userLocation = document.getElementById('search').value;
-
-
-  console.log(userLocation);
-   //var search = document.getElementById('search');
-   //search = encodeURIComponent(search);
-
-// console.log(search);
-
-  //  window.location = 'Map.html';
-
-document.getElementById('formcontent').style.display="none";
-
-  initialize(userLocation);
-  // google.maps.event.addDomListener(window, 'load', initialize);
-
+  initialize(document.getElementById('search').value);
 }
 
 function initialize(userLocation) {
   var mapOptions = {
     center: { lat: 51.525030, lng: -0.104482},
-    zoom: 6
+    zoom: 10
   };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  var geocoder = new google.maps.Geocoder();
-  geocodeAddress(geocoder, map, userLocation);
-
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  geocodeAddress(map, userLocation);
 }
 
-function geocodeAddress(geocoder, resultsMap, userLocation) {
-  // var address = document.getElementById('address').value;
+function geocodeAddress(resultsMap, userLocation) {
+  var geocoder = new google.maps.Geocoder();
+
   geocoder.geocode({'address': userLocation}, function(results, status) {
+
     if (status === google.maps.GeocoderStatus.OK) {
 
-      resultsMap.setCenter(results[0].geometry.location);
+      var searchresults = results[0].geometry.location;
+      resultsMap.setCenter(searchresults);
+
       var marker = new google.maps.Marker({
         map: resultsMap,
-        position: results[0].geometry.location
+        position: searchresults
       });
+
+      for (i = 0; i < sources.length; i++){
+        console.log(sources[i]);
+        var source = new google.maps.LatLng(sources[i].lat,sources[i].lng);
+        var distance = google.maps.geometry.spherical.computeDistanceBetween(source,searchresults);
+        if (distance < 10000){
+          var marker = new google.maps.Marker({
+            map: resultsMap,
+            position: source
+          });
+        }
+      }
+
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }

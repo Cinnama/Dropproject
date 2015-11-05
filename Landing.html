@@ -2,104 +2,43 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="Landstyles.css"> </head>
-
     <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
   </head>
-
 <body>
 
   <div id="formcontent">
-
     <br>
     <br>
-
-      <img src="http://images.clipartpanda.com/raindrop-clipart-cute-raindrop.png" alt="Drop" style="width:220px;height:288px;">
-
-        <h1>Drop</h1>
-
-        <h2>Find your nearest water source</h2>
-
+    <img src="http://images.clipartpanda.com/raindrop-clipart-cute-raindrop.png" alt="Drop" style="width:220px;height:288px;">
+    <h1>Drop</h1>
+    <h2>Find your nearest water source</h2>
     <br>
 
+    <div id="find_search" style"display:block;">
 
+        <form accept-charset="UTF-8"><div style="margin:0; padding:0; display:inline"><input name="utf8" type="hidden" ></div>
+          <input type="text" class="enterlocation" style="width: 150px; height: 23px; display: inline;" placeholder="Nairobi, Kenya, etc." id="search" autocomplete="on" value="Kuiwetanga Corner Malindi">
+          <input class="btnstyle-submit" style="display:inline;" value="find" id="find-water" onclick="user_input()" >
+        </form>
 
-    <form class="pure-form">
+        <p> or </p>
 
-      <div id="find_search" style"display:block;">
-          <!-- <div style="display: block; position: relative; margin-left: auto; margin-right: auto; width: 500px;"> -->
-          <!-- Need to work on the css formatting - want to center this DIV  -->
+        <form accept-charset="UTF-8" style="display:inline"><div style="margin:0; padding:0; display:inline"><input name="utf8" type="hidden" value="✓"></div>
+          <input type="hidden" name="geolocation" id="geolocation" value="geolocation">
+          <input type="submit" class="btnstyle-submit2" style="display:inline;" value="Current location" name="use_user_location" id="use_user_location" enabled=" "onclick="locateuser()">
+        </form>
 
-
-
-
-
-          <form accept-charset="UTF-8"><div style="margin:0; padding:0; display:inline"><input name="utf8" type="hidden" ></div>
-            <input type="text" class="enterlocation" style="width: 150px; height: 23px; display: inline;" placeholder="Nairobi, Kenya, etc." id="search" autocomplete="on">
-            <input class="btnstyle-submit" style="display:inline;" value="find" id="find-water" onclick="user_input()" >
-
-          </form>
-
-
-          <!-- <form accept-charset="UTF-8" action="/maps" method="POST"><div style="margin:0; padding:0; display:inline"><input name="utf8" type="hidden" value="✓"></div>
-            <input type="text" class="enterlocation" style="width: 150px; height: 23px; display: inline;" placeholder="Nairobi, Kenya, etc." name="search" id="search" autocomplete="on">
-            <input type="submit" class="btnstyle-submit" style="display:inline;" value="find" id="find-water" onclick="locateuser()"> -->
-
-
-
-           <p> or </p>
-
-
-          <form accept-charset="UTF-8" style="display:inline"><div style="margin:0; padding:0; display:inline"><input name="utf8" type="hidden" value="✓"></div>
-            <input type="hidden" name="geolocation" id="geolocation" value="geolocation">
-            <input type="submit" class="btnstyle-submit2" style="display:inline;" value="Current location" name="use_user_location" id="use_user_location" enabled=" "onclick="locateuser()">
-          </form>
-
-        </div>
-
-    </form>
-
+      </div>
   </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
-    <script src="Autocomplete.js"></script>
+  <div id="map-canvas"></div>
 
-     <script src="locateuser.js"></script>
-     <script src="Userinput.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places,geometry"></script>
+  <script src="Autocomplete.js"></script>
+  <!-- <script src="locateuser.js"></script> -->
+  <script src="Userinput.js"></script>
 
-
-     <div id="map-canvas" style="width: 100%; height: 100%"></div>
-
-
-
-     <style type="text/css">
-     html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-     </style>
-     <!-- <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?v=3key=AIzaSyCjnWJ12tXjfdOxca4oY1oTb-wWmuwq2PY">
-     </script> -->
-
-
-
-  </body>
-
-
+</body>
 </html>
-
-
-
-
-<!--  OR
-// <form action="http://google.com">
-// <input type="submit" value="Current location">
-// </form>
-//
-//
-//
-//   <form name="locationform">
-//
-//       <div id="find_search" style"display:block;">
-//           <div style="width:800px; margin: 0 auto;">
